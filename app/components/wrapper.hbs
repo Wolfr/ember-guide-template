@@ -1,0 +1,25 @@
+
+<div style="float: left; width: 20%;">
+  <Spacer>
+    <RichText>
+      <h4>Nav</h4>
+      <ul>
+        {{#each routeTree as |route|}}
+          <li>
+            <LinkTo @route={{route}}>
+              {{route}}
+            </LinkTo>
+          </li>
+        {{/each}}
+      </ul>
+    </RichText>
+  </Spacer>
+</div>
+
+<div style="float: left; width: 80%;">
+  <Spacer>
+    <RichText>
+      {{yield}}
+    </RichText>
+  </Spacer>
+</div>
